@@ -1,0 +1,37 @@
+A language model reads a sequence of tokens and predicts the next one.
+The prediction is a probability distribution over the whole vocabulary.
+The model picks a token, adds it to the input, and predicts again.
+This loop is called autoregressive generation.
+
+Attention lets every token look at the other tokens in the context window.
+Each token builds a query, a key and a value from its own vector.
+The query of one token is compared with the keys of all the other tokens.
+The scores become weights, and the weights mix the values into a new vector.
+A token that matters a lot for the current word receives a large weight.
+A token that does not matter receives a weight close to zero.
+
+Older recurrent networks read one word after the other.
+They could not use the whole graphics card at the same time during training.
+Information from the start of a long sentence faded away before the end.
+The transformer connects every token to every other token in a single step.
+All the tokens are processed at once, so the computation is a big matrix product.
+
+Several heads run in parallel, and each head can look for a different relation.
+One head may link a verb to its subject, another may link a pronoun to its noun.
+The outputs of the heads are joined together and mixed by a linear layer.
+
+The context window has a fixed size.
+A token outside the window is invisible to the model.
+Inside the window, every pair of tokens produces one score.
+For a window of N tokens there are N times N scores.
+If the window becomes twice as long, the grid of scores becomes four times bigger.
+If the window becomes ten times longer, the grid becomes one hundred times bigger.
+This is why a very long context is expensive in time and in memory.
+
+The full pipeline is short.
+First, the text becomes tokens and the tokens become vectors with a position.
+Then attention exchanges information between the tokens.
+Then a small dense network refines each token on its own.
+These two steps are repeated in every layer.
+At the end, a softmax turns the final scores into probabilities.
+The most likely token, or a sampled one, is the next token of the text.

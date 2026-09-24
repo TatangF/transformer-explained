@@ -1,0 +1,3 @@
+torch>=2.0
+matplotlib   # optional: only for the heatmap / plots
+pytest       # optional: only to run the tests

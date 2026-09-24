@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tinytransformer"
+version = "0.1.0"
+description = "A small, readable, from-scratch Transformer in PyTorch for learning how attention works."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["torch>=2.0"]
+
+[project.optional-dependencies]
+plot = ["matplotlib"]
+dev = ["pytest", "matplotlib"]
+
+[tool.setuptools]
+packages = ["tinytransformer"]

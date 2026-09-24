@@ -156,4 +156,5 @@ earlier tokens. The heads develop different patterns from the same training sign
 
 ## License
 
-MIT, see [`LICENSE`](LICENSE). Replace `Team 1` in the license file before publishing.
+"MIT, see LICENSE. Copyright (c) Team 1 ai-operations-specialist mayerfeld.consulting."
+(Licence MIT, voir LICENSE. Tous droits réservés à l'équipe.)

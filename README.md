@@ -107,13 +107,16 @@ step   800   loss 0.120
 (a random guess would give a loss of about 3.64)
 ```
 
-The corpus is tiny, so the model mostly **memorizes** it, and sampled text is a noisy mix of memorized
-fragments. That is expected here. To try something bigger, use your own text file:
+The corpus is tiny, so the model mostly memorizes it, and sampled text is a noisy mix of memorized fragments. That is expected here.
 
-```bash
-python examples/02_train_and_generate.py --file my_text.txt --steps 3000 --max-len 128
+To train on your own text, create a UTF-8 text file (for example, `my_text.txt`) and pass it to the script:
 ```
-
+python examples/02_train_and_generate.py --file my_text.txt --steps 3000 --max-len 128
+````
+For example, if your file is located in `data/my_text.txt`:
+```
+python examples/02_train_and_generate.py --file data/my_text.txt --steps 3000 --max-len 128
+````
 With `--plot`, the script saves the attention weights of each head in the last layer:
 
 ![Attention heads](docs/attention_heads.png)

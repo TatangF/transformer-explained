@@ -157,4 +157,3 @@ earlier tokens. The heads develop different patterns from the same training sign
 ## License
 
 "MIT, see LICENSE. Copyright (c) Team 1 ai-operations-specialist mayerfeld.consulting."
-(Licence MIT, voir LICENSE. Tous droits réservés à l'équipe.)

@@ -156,4 +156,4 @@ earlier tokens. The heads develop different patterns from the same training sign
 
 ## License
 
-MIT, see [`LICENSE`](LICENSE). Replace `<your name>` in the license file before publishing.
+MIT, see [`LICENSE`](LICENSE). Replace `Team 1` in the license file before publishing.
